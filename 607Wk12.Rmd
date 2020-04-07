@@ -1,0 +1,73 @@
+---
+title: "Grubhub Recommender System"
+author: "Layla Quinones"
+date: "4/7/2020"
+output: 
+  html_document: 
+    css: bootstrap.css
+    toc: yes
+    toc_collapsed: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+
+
+
+# Introduction
+
+
+```{r, out.width = "50%", fig.align="center", echo = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/MsQCompSci/607week12/master/grubhub_logo.png")
+```
+<br>
+
+According to their [website](https://about.grubhub.com/about-us/what-is-grubhub/default.aspx), Grubhub is one of the leading food ordering and delivery services, particularly with the largest option of restaurant partners. They feature over 300,000 restaurants across the United States and London. Included in the Grubhub brands are popular food order services *Grubhub, Seamless, LevelUp, AllMenus and MenuPages*.
+
+# Grubhub's Recommender System
+
+As a result of having more that 19 million users, Grubhub has a plethora of data it can use to build a model that can reccomend food to individual users based on their order history. They set out to develop a reccomender system that uses information like a users most frequent order, the time the user orders them and their location, to reccomend meals users should order in the future. According to this article in [WIRED](https://www.wired.com/story/how-grubhub-analyzed-4000-dishes-to-predict-your-next-order/) this is a particularly difficult data problem. Some issues outlined in the article include how certain cuisines that have the same name in multiple cultures/restaurants might take completly different, or some cusines with similar names from various cultures might match better with other cuinsines on other menues (not particularly the item on the menu with the same name). The algorithms they currectly have use the data from 3 seperate data sets:
+
+<ol>
+<li>Menu items/categories/descriptions etc. translated from the restaurant menus by Grubhub staff</li>
+<li>User search logs and Reviews</li>
+<li>Order history (by user and by restaurant)</li>
+</ol>
+
+The article also describes how Grubhub contracted a culinary specialist who gave more insightful information to add to these datasets about the cuinsine, ingredients, taste, cultural background, etc. The algorithms currently in use implement collaberative filtering to recommend restaurants and dishes.
+
+Other intersting articles:
+
+<ul>
+<li>
+[Grubhub – Revolutionizing the food-ordering landscape](https://digital.hbs.edu/platform-digit/submission/grubhub-revolutionizing-the-food-ordering-landscape/)</li>
+<li>[Grubhub Expands Pact With Yelp, Aiming for Cheaper Deliveries](https://www.wsj.com/articles/grubhub-expands-pact-with-yelp-aiming-for-cheaper-deliveries-1521451921)</li>
+<li>[The changing market for food delivery](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-changing-market-for-food-delivery)</li>
+<li>[Alex, What's for Dinner Tonight?](morganstanley.com/ideas/online-food-delivery-market-expands)</li>
+</ul>
+<br>
+
+# Scenario Design for Grubhub
+
+<ol>
+<li>Target Users: Customers that order and interact on their platform</li>
+<li>Key Goals: To provide reccomendations to customers that have a high probability of being ordered (to increase users who choose their platform)</li>
+<li>What Can Help: Grubhub can develop surveys (or can incentivise their restaurants to provide information for them to develop one) that may refine their algorithm to provide a more personalized reccomendation. They may also look into decreasing wait time by investing in a devliery fleet.</li>
+</ol>
+
+# Scenario Design for Customers
+
+<ol>
+<li>Target Users: Customers who are leaving Grubhub for competitors</li>
+<li>Key Goals: To provide reccomendations to customers that they appreciate and want to talk about to others</li>
+<li>What Can Help: Grubhub can use the information taken from surveys (incetivise customers to take them) to tailor the experience and offer other incentives for rating their experiences etc. (Anything that would get people interacting with eachother on the app)</li>
+</ol>
+
+# Reccomendations
+
+Moving foward, I think that Grubhub will benifit from:
+
+<ol>
+<li>Grubhub can develop surveys that can help classify the individual customer profiles into groups that take into account the food they actually order, when they order amd where they order. Reccomendations can draw from the data from other customers that fit or complement the profile, Questions in a survey can include individual prefrences and recommendations for others.</li>
+<li>Grubhub should also focus on embedding experiences in the app where customers can interact with one another about the food they are eating. This may include a feature like "More in your neighborhood who love the same thing" or "Trending in your neighborhood" type options where customers can comment, chat or maybe even meet for a meal at a place they have a mutual interst in.</li>
+</ol>
